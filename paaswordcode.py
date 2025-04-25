@@ -44,9 +44,9 @@ def check_password_strength(password):
     else:
         st.error("**Weak Password** - Follow the suggestion below to make it strong ")
 #Feedback
-        if feedback:
-            with st.expander("Improve your password")
-            for item in feedback:
+    if feedback:
+        with st.expander("Improve your password"):
+             for item in feedback:
                 st.write(item)
 password = st.text_input("Enter your password :", type="password" , help="Ensure your password is strong")
 
